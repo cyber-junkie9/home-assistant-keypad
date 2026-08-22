@@ -23,26 +23,29 @@ Wall variant:
 
 ### Order components
 
+The part names link to a search, so you can pick whichever shop you prefer.
+
 | Part | Qty |
 | --- | --- |
-| Gateron KS-33 low profile switches | 9 |
-| Low profile keycaps | 9 |
-| Seeed Studio XIAO ESP32C6 | 1 |
-| SK6812MINI-E RGB LED, 3 mA | 9 |
-| 74AHCT1G125GW,125 level shifter | 1 |
-| Ceramic capacitor 100 nF 50 V, 0805 | 10 |
-| Resistor 330 Ω, 0805 | 1 |
-| M2 × 3 × 3 mm heat-set threaded inserts | 4 |
-| M2 × 6 mm countersunk Phillips screws | 4 |
+| [Gateron KS-33 low profile switches](https://www.google.com/search?q=Gateron+KS-33+low+profile+switch) | 9 |
+| [Low profile keycaps](https://www.google.com/search?q=Gateron+KS-33+low+profile+keycaps) | 9 |
+| [Seeed Studio XIAO ESP32C6](https://www.google.com/search?q=Seeed+Studio+XIAO+ESP32C6) | 1 |
+| [SK6812MINI-E RGB LED, 3 mA](https://www.google.com/search?q=SK6812MINI-E+RGB+LED+3mA) | 9 |
+| [74AHCT1G125GW,125 level shifter](https://www.google.com/search?q=74AHCT1G125GW%2C125) | 1 |
+| [Ceramic capacitor 100 nF 50 V, 0805](https://www.google.com/search?q=ceramic+capacitor+100nF+50V+0805) | 10 |
+| [Resistor 330 Ω, 0805](https://www.google.com/search?q=resistor+330+ohm+0805+SMD) | 1 |
+| [M2 × 3 × 3 mm heat-set threaded inserts](https://www.google.com/search?q=M2+3x3mm+heat+set+threaded+insert) | 4 |
+| [M2 × 6 mm countersunk Phillips screws](https://www.google.com/search?q=M2+6mm+countersunk+phillips+screw) | 4 |
 
 For the wall-mounted variant you also need:
 
 | Part | Qty |
 | --- | --- |
-| Self-adhesive silicone rubber sheet, 1 mm | 1 |
-| Disc magnet Ø 10 mm, height 3 mm | 4 |
+| [Self-adhesive silicone rubber sheet, 1 mm](https://www.google.com/search?q=self+adhesive+silicone+rubber+sheet+1mm) | 1 |
+| [Disc magnet Ø 10 mm, height 3 mm](https://www.google.com/search?q=disc+magnet+10mm+x+3mm) | 4 |
 
-The keycaps I used are [these ones](https://nl.aliexpress.com/item/1005011938286189.html).
+The keycaps I used are [these ones](https://nl.aliexpress.com/item/1005011938286189.html), variants
+`B-A1 V2` and `W-A2 V2`.
 
 The XIAO usually ships with pin headers. You need two 7-pin strips, so keep them.
 
