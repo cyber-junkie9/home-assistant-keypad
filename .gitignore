@@ -1,0 +1,10 @@
+# ESPHome
+secrets.yaml
+.esphome/
+
+# VSCode Local History extension
+.history/
+
+# KiCad
+*-backups/
+fp-info-cache

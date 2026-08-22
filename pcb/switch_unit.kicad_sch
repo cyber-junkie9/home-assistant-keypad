@@ -1,0 +1,1576 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "698d8794-f205-4a4b-aed3-785ae8d7c012")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_marbastlib-gateron_lp:KS33_SK6812MINI-E"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "LED"
+				(at 2.54 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "KS33_SK6812MINI-E"
+				(at 10.795 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "PCM_marbastlib-gateron_lp:LED_KS33_6028R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Reverse mount adressable LED (WS2812 protocol)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "reverse mount led revmount rgb"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "KS33_SK6812MINI-E_0_0"
+				(text "RGB"
+					(at 2.286 -4.191 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+					)
+				)
+			)
+			(symbol "KS33_SK6812MINI-E_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.556) (xy 1.778 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -3.556) (xy 2.667 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "KS33_SK6812MINI-E_1_1"
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "DOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_marbastlib-gateron_lp:KS33_SW_solder"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "CH"
+				(at 3.048 1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "KS33_SW_solder"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "PCM_marbastlib-gateron_lp:SW_KS33_1u"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, normally open, two pins, 45° tilted"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "KS33_SW_solder_0_1"
+				(polyline
+					(pts
+						(xy -2.54 2.54) (xy -1.524 1.524) (xy -1.524 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -1.1684 1.1684)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 2.54) (xy 2.54 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.016) (xy 2.032 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.143 -1.1938)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.524) (xy 2.54 -2.54) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -2.54 2.54 0)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -2.54 180)
+					(length 0)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 156.21 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8eb66031-6317-4e16-b5cd-e987263beed2")
+	)
+	(junction
+		(at 156.21 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f41918d9-8d4d-4d8a-a2e4-7bb4ffaf68c6")
+	)
+	(wire
+		(pts
+			(xy 156.21 118.11) (xy 156.21 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a7ed44f-e058-477c-8a17-1dce58ed8afd")
+	)
+	(wire
+		(pts
+			(xy 173.99 107.95) (xy 170.18 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f1c7398-b4a3-4582-aaee-651d9f7c8ba3")
+	)
+	(wire
+		(pts
+			(xy 146.05 110.49) (xy 143.51 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dd52ffd-674c-44a1-ac8f-7bc9de2cc653")
+	)
+	(wire
+		(pts
+			(xy 135.89 118.11) (xy 156.21 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92c12f5a-53eb-4be2-b392-698077dc6ba5")
+	)
+	(wire
+		(pts
+			(xy 156.21 114.3) (xy 156.21 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "936dda52-4b8c-423d-8058-e14bf8db17e1")
+	)
+	(wire
+		(pts
+			(xy 165.1 118.11) (xy 156.21 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98ed97c5-62e3-4fa8-9706-7f1ea1465194")
+	)
+	(wire
+		(pts
+			(xy 127 110.49) (xy 128.27 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a470e498-7358-436d-aca3-5f059650be8c")
+	)
+	(wire
+		(pts
+			(xy 156.21 102.87) (xy 156.21 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0dcb68e-cd1a-436f-adfc-08200f2c3008")
+	)
+	(wire
+		(pts
+			(xy 135.89 102.87) (xy 156.21 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3207603-2a27-47be-9b70-c71b9b686512")
+	)
+	(wire
+		(pts
+			(xy 156.21 101.6) (xy 156.21 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e554fc73-c7c0-40ea-b9e1-9fd512587bb2")
+	)
+	(wire
+		(pts
+			(xy 165.1 113.03) (xy 165.1 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fecf92bb-4866-4b96-8aae-373ee3c03c22")
+	)
+	(hierarchical_label "DIN"
+		(shape input)
+		(at 127 110.49 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0be46964-55ba-4ff4-98cc-ef8796c01431")
+	)
+	(hierarchical_label "DOUT"
+		(shape output)
+		(at 146.05 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "122635e9-c55b-4250-bc00-6a6faee85503")
+	)
+	(hierarchical_label "SW"
+		(shape output)
+		(at 173.99 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e37e1570-5ac6-4762-8eb7-bdc8af0eea6a")
+	)
+	(symbol
+		(lib_id "PCM_marbastlib-gateron_lp:KS33_SK6812MINI-E")
+		(at 135.89 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0b0d21db-4fdd-4f0d-82b5-12631b0be7f6")
+		(property "Reference" "LED1"
+			(at 135.89 96.774 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "KS33_SK6812MINI-E"
+			(at 135.89 99.314 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_marbastlib-gateron_lp:LED_KS33_6028R"
+			(at 135.89 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Reverse mount adressable LED (WS2812 protocol)"
+			(at 135.89 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "21b7b406-9042-4ed2-a447-d8e768bd53a6")
+		)
+		(pin "2"
+			(uuid "03e8965f-446f-4c9c-914d-5ed46f940bf9")
+		)
+		(pin "3"
+			(uuid "09eae3c2-7fbe-4685-989d-49681a42c6df")
+		)
+		(pin "1"
+			(uuid "a7cedca6-e0b3-45b4-9b42-530a9e12d1f0")
+		)
+		(instances
+			(project "keypad"
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/106e2097-c7f8-4f90-9680-2b237c328da7"
+					(reference "LED7")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/177ce68c-3cb6-4cc4-afc4-8e9dcda0973d"
+					(reference "LED1")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/378d1ed5-565d-418a-ba62-969c8e61b5d2"
+					(reference "LED5")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/5791b8d8-32c4-4d57-94be-5d82da91440b"
+					(reference "LED4")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/6c338d1c-0b20-4a74-804a-1d52a7dae795"
+					(reference "LED3")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/d85f00f9-e6e7-4e5c-b909-1d5c662f0aab"
+					(reference "LED9")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/e6d8abe0-0771-48cc-a2ac-cc2589bf513f"
+					(reference "LED8")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/f319192c-48d7-4c0e-8d92-05d3346d4b81"
+					(reference "LED6")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/fce246a7-f7cb-4539-9316-d16ecba8f333"
+					(reference "LED2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_marbastlib-gateron_lp:KS33_SW_solder")
+		(at 167.64 110.49 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "378be757-3549-4e83-a62a-79dc605a2567")
+		(property "Reference" "SW1"
+			(at 170.18 101.6 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "KS33_SW_solder"
+			(at 170.18 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_marbastlib-gateron_lp:SW_KS33_1u"
+			(at 167.64 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
+			(at 167.64 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a60d7580-6442-4ff3-a128-982cdc3b23db")
+		)
+		(pin "2"
+			(uuid "2fa89f1e-f080-4cee-9bdf-185c15b4480d")
+		)
+		(instances
+			(project "keypad"
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/106e2097-c7f8-4f90-9680-2b237c328da7"
+					(reference "SW7")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/177ce68c-3cb6-4cc4-afc4-8e9dcda0973d"
+					(reference "SW1")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/378d1ed5-565d-418a-ba62-969c8e61b5d2"
+					(reference "SW5")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/5791b8d8-32c4-4d57-94be-5d82da91440b"
+					(reference "SW4")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/6c338d1c-0b20-4a74-804a-1d52a7dae795"
+					(reference "SW3")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/d85f00f9-e6e7-4e5c-b909-1d5c662f0aab"
+					(reference "SW9")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/e6d8abe0-0771-48cc-a2ac-cc2589bf513f"
+					(reference "SW8")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/f319192c-48d7-4c0e-8d92-05d3346d4b81"
+					(reference "SW6")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/fce246a7-f7cb-4539-9316-d16ecba8f333"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 156.21 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75d3071a-59fb-4835-9472-7b119cd10a8b")
+		(property "Reference" "#PWR07"
+			(at 156.21 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 156.21 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 156.21 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "53665679-0c95-4c79-98aa-a0a24b9fec8d")
+		)
+		(instances
+			(project "keypad"
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/106e2097-c7f8-4f90-9680-2b237c328da7"
+					(reference "#PWR019")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/177ce68c-3cb6-4cc4-afc4-8e9dcda0973d"
+					(reference "#PWR07")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/378d1ed5-565d-418a-ba62-969c8e61b5d2"
+					(reference "#PWR015")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/5791b8d8-32c4-4d57-94be-5d82da91440b"
+					(reference "#PWR013")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/6c338d1c-0b20-4a74-804a-1d52a7dae795"
+					(reference "#PWR011")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/d85f00f9-e6e7-4e5c-b909-1d5c662f0aab"
+					(reference "#PWR023")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/e6d8abe0-0771-48cc-a2ac-cc2589bf513f"
+					(reference "#PWR021")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/f319192c-48d7-4c0e-8d92-05d3346d4b81"
+					(reference "#PWR017")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/fce246a7-f7cb-4539-9316-d16ecba8f333"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 156.21 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ad3f2c3f-66b0-4e8b-9aae-b3706e34d067")
+		(property "Reference" "#PWR06"
+			(at 156.21 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 156.21 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 156.21 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ec9b613-8d9e-46d0-8c4a-1c818c643730")
+		)
+		(instances
+			(project "keypad"
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/106e2097-c7f8-4f90-9680-2b237c328da7"
+					(reference "#PWR018")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/177ce68c-3cb6-4cc4-afc4-8e9dcda0973d"
+					(reference "#PWR06")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/378d1ed5-565d-418a-ba62-969c8e61b5d2"
+					(reference "#PWR014")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/5791b8d8-32c4-4d57-94be-5d82da91440b"
+					(reference "#PWR012")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/6c338d1c-0b20-4a74-804a-1d52a7dae795"
+					(reference "#PWR010")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/d85f00f9-e6e7-4e5c-b909-1d5c662f0aab"
+					(reference "#PWR022")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/e6d8abe0-0771-48cc-a2ac-cc2589bf513f"
+					(reference "#PWR020")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/f319192c-48d7-4c0e-8d92-05d3346d4b81"
+					(reference "#PWR016")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/fce246a7-f7cb-4539-9316-d16ecba8f333"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 156.21 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd3932e4-06d7-42f4-8f00-4b8400cf88d2")
+		(property "Reference" "C2"
+			(at 160.02 109.2199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 160.02 111.7599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 157.1752 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 156.21 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cbfa74ff-e4f6-4058-8e3c-1d9aa6df01bb")
+		)
+		(pin "1"
+			(uuid "b5b4b5f0-7f54-474e-a48f-7164b642c84c")
+		)
+		(instances
+			(project "keypad"
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/106e2097-c7f8-4f90-9680-2b237c328da7"
+					(reference "C8")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/177ce68c-3cb6-4cc4-afc4-8e9dcda0973d"
+					(reference "C2")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/378d1ed5-565d-418a-ba62-969c8e61b5d2"
+					(reference "C6")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/5791b8d8-32c4-4d57-94be-5d82da91440b"
+					(reference "C5")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/6c338d1c-0b20-4a74-804a-1d52a7dae795"
+					(reference "C4")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/d85f00f9-e6e7-4e5c-b909-1d5c662f0aab"
+					(reference "C10")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/e6d8abe0-0771-48cc-a2ac-cc2589bf513f"
+					(reference "C9")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/f319192c-48d7-4c0e-8d92-05d3346d4b81"
+					(reference "C7")
+					(unit 1)
+				)
+				(path "/531f5600-c3df-48e2-bece-8205cd858bd3/fce246a7-f7cb-4539-9316-d16ecba8f333"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

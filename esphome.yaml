@@ -1,0 +1,552 @@
+# =============================================================================
+#  Seeed XIAO ESP32-C6  ·  9 × SK6812MINI-E  ·  9 × momentary switch
+# =============================================================================
+#  PASTE THIS WHOLE FILE UNDERNEATH THE CONFIG ESPHOME GENERATED FOR YOU.
+#
+#  It only contains the parts the wizard does not write, so nothing here
+#  collides with the esphome / esp32 / logger / api / ota / wifi / captive_portal
+#  blocks you already have. Leave those exactly as they are.
+#
+#  Hardware notes taken from the schematic:
+#    · LED1..LED9 are daisy-chained (DOUT -> DIN), fed from D0 through R1.
+#    · CH1..CH9 are momentary switches to GND. The internal pull-ups of
+#      the ESP32-C6 are enabled and the inputs are inverted.
+#
+# =============================================================================
+
+substitutions:
+  long_press_ms: 1000ms    # how long a key must be held to count as a long press
+
+  led_data_pin: GPIO0     # D0  -> R1 -> DIN of the first LED in the chain
+  unused_pin: GPIO18      # D10 / MOSI - R11+D1 unpopulated, parked low
+
+  # --- button pins -----------------------------------------------------------
+  ch1_pin: GPIO20         # D9  / MISO
+  ch2_pin: GPIO22         # D4  / SDA
+  ch3_pin: GPIO1          # D1
+  ch4_pin: GPIO19         # D8  / SCK
+  ch5_pin: GPIO23         # D5  / SCL
+  ch6_pin: GPIO2          # D2
+  ch7_pin: GPIO17         # D7  / RX
+  ch8_pin: GPIO16         # D6  / TX
+  ch9_pin: GPIO21         # D3
+
+  # --- position of each key's LED in the physical chain (0..8) ---------------
+  led1_index: "6"
+  led2_index: "5"
+  led3_index: "0"
+  led4_index: "7"
+  led5_index: "4"
+  led6_index: "1"
+  led7_index: "8"
+  led8_index: "3"
+  led9_index: "2"
+
+# On-board user LED. Solid = connected, blinking = wifi/API problem.
+# Remove this block if you would rather keep the LED dark.
+status_led:
+  pin:
+    number: GPIO15
+    inverted: true
+
+# Uncomment for a standalone control page at http://<device>/ (no HA needed).
+# web_server:
+#   version: 3
+
+# -----------------------------------------------------------------------------
+#  Outputs
+# -----------------------------------------------------------------------------
+output:
+  - platform: gpio
+    id: unused_d10
+    pin: ${unused_pin}
+
+# -----------------------------------------------------------------------------
+#  Antenna
+# -----------------------------------------------------------------------------
+#  Both pins are driven low at boot, which powers the RF switch and selects the
+#  on-board ceramic antenna. For the u.FL connector set antenna_select to
+#  restore_mode: ALWAYS_ON.
+# -----------------------------------------------------------------------------
+switch:
+  - platform: gpio
+    id: rf_switch_enable
+    pin: GPIO3
+    internal: true
+    restore_mode: ALWAYS_OFF
+
+  - platform: gpio
+    id: antenna_select
+    pin: GPIO14
+    internal: true
+    restore_mode: ALWAYS_OFF
+
+# -----------------------------------------------------------------------------
+#  Lights - one entity per LED
+# -----------------------------------------------------------------------------
+#  The physical chain is declared first and kept internal; the nine partition
+#  lights below each own exactly one pixel and are what you actually control.
+# -----------------------------------------------------------------------------
+light:
+  - platform: esp32_rmt_led_strip
+    id: led_chain
+    name: "LED chain"
+    internal: true
+    pin: ${led_data_pin}
+    num_leds: 9
+    chipset: SK6812          # SK6812MINI-E timing
+    channel_colors: GRB
+    rmt_symbols: 48          # one RMT block on the C6; raise to 96 if flickery
+    max_refresh_rate: 16ms   # ~60 Hz ceiling, keeps the RMT from being hammered
+    restore_mode: ALWAYS_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_1
+    name: "LED 1"
+    segments:
+      - id: led_chain
+        from: ${led1_index}
+        to: ${led1_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_2
+    name: "LED 2"
+    segments:
+      - id: led_chain
+        from: ${led2_index}
+        to: ${led2_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_3
+    name: "LED 3"
+    segments:
+      - id: led_chain
+        from: ${led3_index}
+        to: ${led3_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_4
+    name: "LED 4"
+    segments:
+      - id: led_chain
+        from: ${led4_index}
+        to: ${led4_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_5
+    name: "LED 5"
+    segments:
+      - id: led_chain
+        from: ${led5_index}
+        to: ${led5_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_6
+    name: "LED 6"
+    segments:
+      - id: led_chain
+        from: ${led6_index}
+        to: ${led6_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_7
+    name: "LED 7"
+    segments:
+      - id: led_chain
+        from: ${led7_index}
+        to: ${led7_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_8
+    name: "LED 8"
+    segments:
+      - id: led_chain
+        from: ${led8_index}
+        to: ${led8_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+  - platform: partition
+    id: led_9
+    name: "LED 9"
+    segments:
+      - id: led_chain
+        from: ${led9_index}
+        to: ${led9_index}
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 0s
+
+# -----------------------------------------------------------------------------
+#  Buttons
+# -----------------------------------------------------------------------------
+binary_sensor:
+  - platform: gpio
+    id: ch1
+    name: "Button 1 held"
+    internal: true
+    pin:
+      number: ${ch1_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_1
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_1
+          then:
+            - event.trigger:
+                id: key1
+                event_type: press
+      - script.stop: hold_1
+  - platform: gpio
+    id: ch2
+    name: "Button 2 held"
+    internal: true
+    pin:
+      number: ${ch2_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_2
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_2
+          then:
+            - event.trigger:
+                id: key2
+                event_type: press
+      - script.stop: hold_2
+  - platform: gpio
+    id: ch3
+    name: "Button 3 held"
+    internal: true
+    pin:
+      number: ${ch3_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_3
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_3
+          then:
+            - event.trigger:
+                id: key3
+                event_type: press
+      - script.stop: hold_3
+  - platform: gpio
+    id: ch4
+    name: "Button 4 held"
+    internal: true
+    pin:
+      number: ${ch4_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_4
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_4
+          then:
+            - event.trigger:
+                id: key4
+                event_type: press
+      - script.stop: hold_4
+  - platform: gpio
+    id: ch5
+    name: "Button 5 held"
+    internal: true
+    pin:
+      number: ${ch5_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_5
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_5
+          then:
+            - event.trigger:
+                id: key5
+                event_type: press
+      - script.stop: hold_5
+  - platform: gpio
+    id: ch6
+    name: "Button 6 held"
+    internal: true
+    pin:
+      number: ${ch6_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_6
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_6
+          then:
+            - event.trigger:
+                id: key6
+                event_type: press
+      - script.stop: hold_6
+  - platform: gpio
+    id: ch7
+    name: "Button 7 held"
+    internal: true
+    pin:
+      number: ${ch7_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_7
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_7
+          then:
+            - event.trigger:
+                id: key7
+                event_type: press
+      - script.stop: hold_7
+  - platform: gpio
+    id: ch8
+    name: "Button 8 held"
+    internal: true
+    pin:
+      number: ${ch8_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_8
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_8
+          then:
+            - event.trigger:
+                id: key8
+                event_type: press
+      - script.stop: hold_8
+  - platform: gpio
+    id: ch9
+    name: "Button 9 held"
+    internal: true
+    pin:
+      number: ${ch9_pin}
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_off: 5ms
+    on_press:
+      - script.execute: hold_9
+    on_release:
+      - if:
+          condition:
+            script.is_running: hold_9
+          then:
+            - event.trigger:
+                id: key9
+                event_type: press
+      - script.stop: hold_9
+
+# -----------------------------------------------------------------------------
+#  Key events - this is the interface Home Assistant should use
+# -----------------------------------------------------------------------------
+#  Exactly one of "press" or "long_press" arrives per key press, each with a
+#  fresh timestamp, so rapid repeated taps each arrive separately. In HA these
+#  are event entities: trigger on the state changing and branch on the
+#  event_type attribute, which will only ever be one or the other.
+#
+#  If your ESPHome rejects `event.trigger`, the action is named `event.fire`
+#  in some versions - same arguments.
+# -----------------------------------------------------------------------------
+event:
+  - platform: template
+    id: key1
+    name: "Key 1"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key2
+    name: "Key 2"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key3
+    name: "Key 3"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key4
+    name: "Key 4"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key5
+    name: "Key 5"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key6
+    name: "Key 6"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key7
+    name: "Key 7"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key8
+    name: "Key 8"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+  - platform: template
+    id: key9
+    name: "Key 9"
+    device_class: button
+    event_types:
+      - press
+      - long_press
+
+# -----------------------------------------------------------------------------
+#  Hold timers - one per key, so two keys can be held at the same time
+# -----------------------------------------------------------------------------
+#  Reaching the end of a script means that key was held past the threshold;
+#  being stopped first means it was a tap. The event fires from inside the
+#  script, which is why it lands mid-hold rather than on release.
+# -----------------------------------------------------------------------------
+script:
+  - id: hold_1
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key1
+          event_type: long_press
+  - id: hold_2
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key2
+          event_type: long_press
+  - id: hold_3
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key3
+          event_type: long_press
+  - id: hold_4
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key4
+          event_type: long_press
+  - id: hold_5
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key5
+          event_type: long_press
+  - id: hold_6
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key6
+          event_type: long_press
+  - id: hold_7
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key7
+          event_type: long_press
+  - id: hold_8
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key8
+          event_type: long_press
+  - id: hold_9
+    mode: restart
+    then:
+      - delay: ${long_press_ms}
+      - event.trigger:
+          id: key9
+          event_type: long_press
