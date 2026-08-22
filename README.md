@@ -136,6 +136,14 @@ below show where each part sits.
 
 ![LED placement](docs/images/pcb-leds.png)
 
+**IMPORTANT:** the LEDs go in one orientation only. The package has one corner cut at an angle, and
+the board has a small triangle printed next to every LED footprint. The cut corner points at the
+triangle. All 9 LEDs face the same way, so before you solder, check that all nine cut corners point
+in the same direction.
+
+The LEDs are daisy chained, so a single LED turned the wrong way breaks the chain: that one and
+every LED after it stay dark.
+
 10 × 100 nF capacitor:
 
 ![Capacitor placement](docs/images/pcb-caps.png)
