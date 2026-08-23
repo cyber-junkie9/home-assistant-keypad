@@ -11,6 +11,15 @@ Wall variant:
 
 ![Wall variant](docs/images/keypad-wall.png)
 
+## Discord
+
+Join the Discord if you want to follow along or ask questions: https://discord.gg/4yMsHbQQGn
+
+## Waitlist
+
+Want a pre-assembled one instead of building it yourself? Join the waitlist:
+https://keypad.alex-labs.dev
+
 ## How to build it
 
 ### Tools required
